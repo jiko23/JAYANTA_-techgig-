@@ -144,4 +144,4 @@ df1['description'] = df1['description'].apply(lambda x: remove_stopwords(x))
 df1['long_description'] = df1['long_description'].apply(lambda x: remove_stopwords(x))
 
 ##################################################################################################################################################################
-df1.to_csv(r'E:\prog\Train_data\updated_train_data_update1.csv') ## CONVERTING THE DATAFRAME INTO CSV FILE
+df1[1::].to_csv(r'E:\prog\Train_data\updated_train_data_update1.csv') ## CONVERTING THE DATAFRAME INTO CSV FILE
