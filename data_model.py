@@ -7,8 +7,6 @@ from sklearn.preprocessing import LabelBinarizer
 from keras.layers import Activation, Dense,Input, Dropout
 from keras.models import Model
 from keras.layers.merge import concatenate
-from keras.callbacks import EarlyStopping
-#from keras.callbacks import ModelCheckpoint
 from keras import optimizers as opt
 
 ######################################################################################################################################################################################
@@ -45,7 +43,7 @@ def model_1(data,category) :
 """
 
 def final_model(data):
-	train_size = int(len(data) * .90) ## DEFINING THE RATIO OF DATA FOR TRAINING i.e.80% DATA FOR TRAINING AND REMAINING 20% FOR TESTING
+	train_size = int(len(data) * .90) ## DEFINING THE RATIO OF DATA FOR TRAINING i.e.90% DATA FOR TRAINING AND REMAINING 10% FOR TESTING
 
 	train1 = data['id'][:train_size] ## TRAIN FEATURE 1
 	train2 = data['keyword_set'][:train_size] ## TRAIN FEATURE 2
@@ -63,14 +61,6 @@ def final_model(data):
 	tokenizer.fit_on_texts(train2)
 	x_train = tokenizer.texts_to_matrix(train2, mode='tfidf')
 	x_test = tokenizer.texts_to_matrix(test2, mode='tfidf')
-
-	"""
-	vocab1 = 500 ## VOCABULARY SIZE FOR FEATURE1
-	tokenizer = Tokenizer(num_words=vocab1)
-	tokenizer.fit_on_texts(train1)
-	x_train1 = tokenizer.texts_to_matrix(train1, mode='tfidf')
-	x_test1 = tokenizer.texts_to_matrix(test1, mode='tfidf')
-	"""
 	######### ENCODING THE TRAIN LABELS. IF TEST LABELS ARE PRESENT THEN WE CAN ENCODE THEM ALSO. ##############
 	encoder = LabelBinarizer()
 	encoder.fit(train_label1)
@@ -114,13 +104,11 @@ def final_model(data):
 				prediction = model.predict(np.array([x_test[j]]))
 				predicted_label= text_labels[np.argmax(prediction[0])]
 				output_1.append(predicted_label)
-				#print(test1.iloc[i] ,"Predicted_label:", predicted_label, "-->" ,test2.iloc[i])
 		else :
 			for j in range(0,len(x_test)) :
 				prediction = model.predict(np.array([x_test[j]]))
 				predicted_label= text_labels[np.argmax(prediction[0])]
 				output_2.append(predicted_label)
-				#print(test1.iloc[i] ,"Predicted_label:", predicted_label, "-->" ,test2.iloc[i])
 
 	store_list = []
 	if len(output_1) == len(output_2):
