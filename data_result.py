@@ -15,7 +15,7 @@ with open(r'E:\prog\Train_data\updated_train_data_update1.csv', encoding="utf8")
 
 header = rows.pop(0) 
 
-data = pd.DataFrame(rows[1:500],columns=header)
+data = pd.DataFrame(rows,columns=header)
 key_words = data['keyword_set']
 
 ###################################
