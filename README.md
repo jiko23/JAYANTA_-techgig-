@@ -13,7 +13,7 @@ The following steps to be followed ::
  
  
 (b) Project build steps::
-  1. 'data_preprocess.py' : It consists of data preprocessing steps,translation of data(text) to english language. For translating to       english language two different packages has been used: (i) textblob, (ii) googletrans . To avoid putting much load on one translator  try-except method has been used. It is recommended that internet connection must be very strong for large dataset translation. Key_phrase extraction has been also done here. Finally the preprocessed data has been converted to .csv file. (Kindly change the saving address as per yourself)
+  1. 'data_preprocess.py' : It consists of data preprocessing steps,translation of data(text) to english language. For translating to english language two different packages has been used: (i) textblob, (ii) googletrans . To avoid putting much load on one translator  try-except method has been used. It is recommended that internet connection must be very strong for large dataset translation. Key_phrase extraction has been also done here. Finally the preprocessed data has been converted to .csv file. (Kindly change the saving address as per yourself)
  
   2. 'data_model.py' : It consists of the AI/ML models which will be used for mapping to different categories.
  
@@ -23,3 +23,18 @@ The following steps to be followed ::
    Run scripts in the below order:
     1. data_preprocess.py
     2. data_result.py
+
+Result files::
+ 1. updated_train_data_update1.csv --> This file contains the cleaned texts and extracted keywords.
+ 2. Result.csv --> This file contains the proposed approach for automaic unsupervised mapping of extracted keywords
+		   with the categories provided in cat_level.csv file.
+
+ * point to be noted: these results are for 500 samples and is presented to prove that the code is running.  
+
+###################################################################################################################################################################
+Files submitted:
+ a. Jayanta_techgig--master --> code repo(github)
+ b. ReadMe.txt --> Instruction and details
+ c. Result.csv -->This file contains the proposed approach for automaic unsupervised mapping of extracted keywords
+		   with the categories provided in cat_level.csv file.
+ d.updated_train_data_update1.csv --> This file contains the cleaned texts and extracted keywords.
