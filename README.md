@@ -3,7 +3,7 @@ This project is based on Keyeword/entity/key_phrases extraction from a dataset. 
 The following steps to be followed ::
 
 (a) Environment Setup for this project:
-  1. Install Anaconda (python_version >= 3)
+  1. Install Anaconda (python_version > 3)
   2. Install Tensorflow-GPU and Keras. Take help of the below document:
     https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781
   3. Install googletrans package from anaconda cloud or using pip.
