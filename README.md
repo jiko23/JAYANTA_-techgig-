@@ -10,7 +10,7 @@ Environment Setup for this project:
  6. Install rake_nltk.
  
  
- Running the project::
+ Project build steps::
  1. 'data_preprocess.py' : It consists of data preprocessing steps,translation of data(text) to english language. For translating to       english language two different packages has been used: (a) textblob, (b) googletrans . To avoid putting much load on one translator try-except method has been used. It is recommended that internet connection must be very strong for large dataset translation. Key_phrase extraction has been also done here. Finally the preprocessed data has been converted to .csv file. (Kindly change the saving address as per yourself)
  
  2. 'data_model.py' : It consists of the AI/ML models which will be used for mapping to different categories.
