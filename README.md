@@ -33,8 +33,7 @@ Result files::
 
 ###################################################################################################################################################################
 Files submitted:
- a. Jayanta_techgig--master --> code repo(github)
- b. ReadMe.txt --> Instruction and details
+ a. ReadMe.md --> Instruction and details
  c. Result.csv -->This file contains the proposed approach for automaic unsupervised mapping of extracted keywords
 		   with the categories provided in cat_level.csv file.
  d.updated_train_data_update1.csv --> This file contains the cleaned texts and extracted keywords.
