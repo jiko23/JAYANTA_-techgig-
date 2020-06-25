@@ -26,6 +26,7 @@ def model_1(data,category) :
 		else:
 			dict_obj.__setitem__(i,category[i])
 
+	dict_obj = dict( [(k,v) for k,v in dict_obj.items() if v!=''])
 	num_clusters = list(dict_obj)[-1]
 
 	vectorizer = TfidfVectorizer(stop_words='english',ngram_range = (2,3))
