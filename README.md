@@ -34,6 +34,6 @@ Result files::
 ###################################################################################################################################################################
 Files submitted:
  a. ReadMe.md --> Instruction and details
- c. Result.csv -->This file contains the proposed approach for automaic unsupervised mapping of extracted keywords
+ b. Result.csv -->This file contains the proposed approach for automaic unsupervised mapping of extracted keywords
 		   with the categories provided in cat_level.csv file.
- d.updated_train_data_update1.csv --> This file contains the cleaned texts and extracted keywords.
+ c.updated_train_data_update1.csv --> This file contains the cleaned texts and extracted keywords.
